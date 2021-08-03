@@ -25,8 +25,10 @@ Array.prototype.myMap = function(callback) {
 // Array#myReduce(callback[, initialValue])
 
 Array.prototype.myReduce = function(initialValue, callback) {
-    initialValue = (typeof initialValue === 'undefined') ? this.first : initialValue;
-    this.myEach((ele) => callback(initialValue, ele));
+    let value = initialValue = (typeof initialValue === 'undefined') ? this.first : initialValue;
+
+    this.myEach((ele) => callback(value, ele));
+    return value;
 }
 
-array.myReduce(2, (ele) => ele * 2) // 
+console.log(array.myReduce(2, (ele) => ele * 2)) // 
