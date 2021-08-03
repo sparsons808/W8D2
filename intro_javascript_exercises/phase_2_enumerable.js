@@ -29,4 +29,4 @@ Array.prototype.myReduce = function(initialValue, callback) {
     this.myEach((ele) => callback(initialValue, ele));
 }
 
-array.myReduce(2, (ele) => ele * 2)
+array.myReduce(2, (ele) => ele * 2) // 
